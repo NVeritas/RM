@@ -1,0 +1,31 @@
+{
+  "Api:Cors:Enabled": "true", 
+  "ForceHttps": "true",
+  "Api": {
+    "Url": "https://fria-app-staging.app.corpintra.net/RABSmanagement/",
+    "Token": "wWNsnYMWyQ11rLpAascy60E4E1ghn4Qcf34pStprd8X9dKGk0t+HHjkWaNnBLlTOpdlaEHmIgOwSqY0K36DLXKueJXx6lvjpT02bp"
+  },
+  "AppEnv": "daimler-test",
+  "Fria2": {
+    "Auth": {
+      "Type": "DaimlerOIDC",
+      "DaimlerOIDC": {
+        "CookieName": "RabsNextTestAuth",
+        "ClientId": "61a31288-df41-4a6b-934e-3a017d146da4",
+        "ClientSecret": "vTelBJfqJiAkEBoUhcjoKrHcijAJVuMbjepflGpoMGQlOcJooFQlMzgOYgORnbhh",
+        "CallbackPath": "/signin-oidc/",
+      }
+    },
+    "OwinWebProxyHost": {
+      "Proxies": {
+        "default": {
+          "ProxyPass": "https://fria-app-staging.app.corpintra.net/RABSmanagement/",
+          "AuthorizeWith": "ApiKey",
+          "ApiKey": {
+            "AuthToken": "wWNsnYMWyQ11rLpAascy60E4E1ghn4Qcf34pStprd8X9dKGk0t+HHjkWaNnBLlTOpdlaEHmIgOwSqY0K36DLXKueJXx6lvjpT02bp"
+          }
+        }
+      }
+    }
+  }
+}

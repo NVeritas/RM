@@ -1,0 +1,34 @@
+{
+  "AppEnv": "development",
+  "Fria2": {
+    "Auth": {
+      "Type": "Simple",
+      "Simple": {
+        "CookieName": "RabsService_Auth"
+      },      
+      "Logging": {
+        "DaimlerFormatter": true,
+        "Source": "Fria2.Logging",
+        "LogLevels": {
+          "Default": "Information"
+        },
+        "File": {
+          "Disabled": false,
+          "Path": "RABS_WS_.log",
+          "SizeLimit": 100000000
+        }
+      }
+    },
+    "OwinWebProxyHost": {
+      "Proxies": {
+        "default": {
+          "ProxyPass": "http://localhost:5010/",
+          "AuthorizeWith": "ApiKey",
+          "ApiKey": {
+            "AuthToken": "--"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "short_name": "Rabs Dashboard",
+  "name": "Rabs Dashboard administration web app",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
